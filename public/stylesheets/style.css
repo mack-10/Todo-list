@@ -1,0 +1,52 @@
+* {
+	margin: 0;
+	padding: 0;
+	/* box-sizing:border-box; */
+}
+
+/* 배경색 */
+body {
+	background-color: aliceblue;
+}
+
+.todo-container {
+	margin: 50% 50%;
+
+	width: 600px;
+	/* height: 100px; */
+
+	background-color: antiquewhite;
+
+	border-radius: 10%;
+	border: solid 1px;
+
+	text-align: center;
+}
+
+.todo-container h2 {
+
+}
+
+
+/* TODO-HEADER */
+.todo-header form  {
+
+}
+
+.todo-header form  {
+
+}
+
+
+/* TODO-LIST */
+.todo-list ul  {
+	list-style: none;
+}
+
+.todo-list li {
+
+}
+
+.todo-list div {
+
+}
