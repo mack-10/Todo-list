@@ -10,41 +10,53 @@ body {
 }
 
 .todo-container {
-	margin: 50% 50%;
+	/* 정가운데 정렬 */
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 
-	width: 600px;
-	/* height: 100px; */
+	width: 500px;
+	height: 300px;
 
 	background-color: antiquewhite;
 
-	border-radius: 10%;
-	border: solid 1px;
+	border-radius: 20px;
+	border: double 4px grey;
 
 	text-align: center;
 }
 
 .todo-container h2 {
-
+	font-family: monospace;
+	color: grey;
 }
 
 
 /* TODO-HEADER */
-.todo-header form  {
+.todo form input {
+	width: 300px;
+	
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-color: grey;
 
+	background-color: antiquewhite;
 }
 
-.todo-header form  {
-
+.todo form .fa fa-plus {
+	color: white;
 }
 
 
 /* TODO-LIST */
 .todo-list ul  {
-	list-style: none;
+	/* list-style-type: none; */
 }
 
 .todo-list li {
-
+	list-style-type: none;
 }
 
 .todo-list div {
