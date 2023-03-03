@@ -6,7 +6,7 @@
 
 /* 배경색 */
 body {
-	background-color: aliceblue;
+	background-color: #939597;
 }
 
 .todo-container {
@@ -19,34 +19,47 @@ body {
 	width: 500px;
 	height: 300px;
 
-	background-color: antiquewhite;
+	background-color: #F5DF4D;
 
 	border-radius: 20px;
-	border: double 4px grey;
+	border: double 4px #939597;
 
 	text-align: center;
 }
 
 .todo-container h2 {
-	font-family: monospace;
-	color: grey;
+	margin: 20px;
+
+	font-family: 'Courier New', Courier, monospace;
+	color: #939597;
 }
 
 
 /* TODO-HEADER */
 .todo form input {
 	width: 300px;
+	height: 25px;
+
+	margin-bottom: 20px;
 	
 	border-top: none;
 	border-left: none;
 	border-right: none;
-	border-color: grey;
+	border-color: #939597;
 
-	background-color: antiquewhite;
+	background-color: #F5DF4D;
+	font-family: 'Courier New', Courier, monospace;
 }
 
-.todo form .fa fa-plus {
-	color: white;
+.todo form button {
+	border: none;
+
+	background-color: #F5DF4D;
+	color: #939597;
+}
+
+.todo form button:hover {
+	transform: scale(1.2);
 }
 
 
@@ -60,5 +73,27 @@ body {
 }
 
 .todo-list div {
+	display: inline;
 
+	font-family: 'Courier New', Courier, monospace;
+}
+
+.todo-list .edit {
+	text-decoration: none;
+	
+	color: #939597;
+}
+
+.todo-list .edit:hover {
+	transform: scale(1.2);
+}
+
+.todo-list .remove {
+	text-decoration: none;
+	
+	color:#939597;
+}
+
+.todo-list .remove:hover {
+	transform: scale(1.2);
 }
