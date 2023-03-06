@@ -75,7 +75,10 @@ body {
 .todo-list div {
 	display: inline;
 
+	margin-right: 10px;
+
 	font-family: 'Courier New', Courier, monospace;
+	color: #939597;
 }
 
 .todo-list .edit {

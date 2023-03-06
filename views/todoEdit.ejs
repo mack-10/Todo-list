@@ -24,18 +24,28 @@
 			</form>
 			<ul class="todo-list">
 				<% todoTasks.forEach(details => { %>
-					<li class="todo-list-item">
-						<div class="todo-list-item-name"><%= details.content %></div>
-						<a href="/edit/<%= details._id %>" class="edit">
-							<!-- fa fa-edit: edit btn -->
-							<span class="fa fa-edit"></span>
-						</a>
-						<a href="/remove/<%= details._id %>" class="remove">
-							<!-- fa fa times: remove btn-->
-							<span class="fa fa-times"></span>
-						</a>
-					</li>
-				<% }) %>
+					<% if (details._id == idTask) { %>
+						<li class="todo-list-item">
+							<form action ="/edit/<%= details._id %>" method="POST">
+								<input type="text" value="<%= details.content %>" name="content">
+								<button type="submit" class="fa fa-edit"></button>
+								<a href="/" class="fa fa-times"></a>
+							</form>
+						</li>
+					<% } else { %>
+						<li class="todo-list-item">
+							<div class="todo-list-item-name"><%= details.content %></div>
+							<a href="/edit/<%= details._id %>" class="edit">
+								<!-- fa fa-edit: edit btn -->
+								<span class="fa fa-edit"></span>
+							</a>
+							<a href="/remove/<%= details._id %>" class="remove">
+								<!-- fa fa times: remove btn-->
+								<span class="fa fa-times"></span>
+							</a>
+						</li>
+					<% } %>
+				<% }); %>
 			</ul>
 		</div>
 	</div>
