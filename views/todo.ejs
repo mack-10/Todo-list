@@ -23,17 +23,19 @@
 				</button>
 			</form>
 			<ul class="todo-list">
+				<% todoTasks.forEach(details => { %>
 				<li class="todo-list-item">
-					<div class="todo-list-item-name">text</div>
-					<a href="#" class="edit">
+					<div class="todo-list-item-name"><%= details.content %></div>
+					<a href="/edit/<%= details._id %>" class="edit">
 						<!-- fa fa-edit: edit btn -->
 						<span class="fa fa-edit"></span>
 					</a>
-					<a href="#" class="remove">
+					<a href="/remove/<%= details._id %>" class="remove">
 						<!-- fa fa times: remove btn-->
 						<span class="fa fa-times"></span>
 					</a>
 				</li>
+				<% }) %>
 			</ul>
 		</div>
 	</div>

@@ -3,7 +3,7 @@ import dotenv from "dotenv";
 import mongoose from "mongoose";
 import path from "path";
 import { fileURLToPath } from "url";
-import TodoTask from "./models/TodoTask";
+import TodoTask from "./models/TodoTask.js";
 
 const app = express();
 dotenv.config();
@@ -35,12 +35,30 @@ app.use(express.urlencoded({ extended: true }));
 
 
 // GET METHOD: 서버 자원을 가져오고자 할 때 사용.
+// READ
 app.get("/", (req, res) => {
-	res.render('todo.ejs');
-})
+	TodoTask.find({}) // find all documents
+		.then((tasks) => {
+			res.render("todo.ejs", { todoTasks: tasks });
+		})
+		.catch ((err) => {
+			console.log(err);
+		})
+});
 
 // POST METHOD: 서버에 자원을 새로 등록하고자 할 때 사용.
-// When there's post signal, show the request's body
+// CREATE
 app.post("/", (req, res) => {
-	console.log(req.body);
+	const todoTask = new TodoTask ({
+		content: req.body.content
+	});
+
+	todoTask.save()
+		.then (() => {
+			res.redirect("/");
+		})
+		.catch ((err) => {
+			res.redirect("/");
+		})
 });
+
