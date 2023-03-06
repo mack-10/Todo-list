@@ -17,7 +17,7 @@ body {
 	transform: translate(-50%, -50%);
 
 	width: 500px;
-	height: 300px;
+	height: 500px;
 
 	background-color: #F5DF4D;
 
@@ -36,6 +36,7 @@ body {
 
 
 /* TODO-HEADER */
+/* .todo form input { */
 .todo form input {
 	width: 300px;
 	height: 25px;
@@ -60,6 +61,7 @@ body {
 
 .todo form button:hover {
 	transform: scale(1.2);
+	color: #86888a;
 }
 
 
@@ -72,31 +74,35 @@ body {
 	list-style-type: none;
 }
 
-.todo-list div {
-	display: inline;
+.todo-list .todo-list-item-name {
+	display: inline-block;
 
-	margin-right: 10px;
+	margin: 5px 10px 5px 0;
 
 	font-family: 'Courier New', Courier, monospace;
 	color: #939597;
 }
 
-.todo-list .edit {
+.todo-list #edit {
 	text-decoration: none;
-	
 	color: #939597;
 }
 
-.todo-list .edit:hover {
+.todo-list #edit:hover {
 	transform: scale(1.2);
+	color: #86888a;
 }
 
-.todo-list .remove {
+.todo-list #remove {
 	text-decoration: none;
-	
 	color:#939597;
 }
 
-.todo-list .remove:hover {
+.todo-list #remove:hover {
 	transform: scale(1.2);
+	color: #86888a;
+}
+
+.todo-list input {
+	color: #939597;
 }

@@ -26,11 +26,11 @@
 				<% todoTasks.forEach(details => { %>
 					<li class="todo-list-item">
 						<div class="todo-list-item-name"><%= details.content %></div>
-						<a href="/edit/<%= details._id %>" class="edit">
+						<a href="/edit/<%= details._id %>" id="edit">
 							<!-- fa fa-edit: edit btn -->
 							<span class="fa fa-edit"></span>
 						</a>
-						<a href="/remove/<%= details._id %>" class="remove">
+						<a href="/remove/<%= details._id %>" id="remove">
 							<!-- fa fa times: remove btn-->
 							<span class="fa fa-times"></span>
 						</a>
